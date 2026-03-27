@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>T-Shirts</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1 class="logo">Fashion Store</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="tshirts.html">T-Shirts</a>
+<a href="jeans.html">Jeans</a>
+<a href="jackets.html">Jackets</a>
+<a href="shoes.html">Shoes</a>
+<a href="support.html">Support</a>
+
+</nav>
+
+</header>
+
+
+<div class="back-btn">
+<a href="index.html">⬅ Back to Home</a>
+</div>
+
+
+<section class="products">
+
+<h2>Oversize Urban T-Shirts</h2>
+
+<p>Discover our streetwear T-Shirts collection</p>
+
+
+<div class="product-container">
+
+
+<div class="product">
+
+<img src="oversize-urban-black.jpg">
+
+<h3>Oversize Urban T-Shirt Black</h3>
+
+<p>MAD250</p>
+
+<button onclick="openPopup('Oversize Urban T-Shirt Black')">Confirm Order</button>
+
+</div>
+
+
+
+<div class="product">
+
+<img src="oversize-urban-grey.jpg">
+
+<h3>Oversize Urban T-Shirt Grey</h3>
+
+<p>MAD240</p>
+
+<button onclick="openPopup('Oversize Urban T-Shirt Grey')">Confirm Order</button>
+
+</div>
+
+
+
+<div class="product">
+
+<img src="oversize-urban-tshirt-brown.jpg">
+
+<h3>Oversize Urban T-Shirt Brown</h3>
+
+<p>MAD260</p>
+
+<button onclick="openPopup('Oversize Urban T-Shirt Brown')">Confirm Order</button>
+
+</div>
+
+
+
+<div class="product">
+
+<img src="oversize-urban-white.jpg">
+
+<h3>Oversize Urban T-Shirt White</h3>
+
+<p>MAD250</p>
+
+<button onclick="openPopup('Oversize Urban T-Shirt White')">Confirm Order</button>
+
+</div>
+
+
+
+<div class="product">
+
+<img src="oversize-urban-tshirt-beige.jpg">
+
+<h3>Oversize Urban T-Shirt Beige</h3>
+
+<p>MAD270</p>
+
+<button onclick="openPopup('Oversize Urban T-Shirt Beige')">Confirm Order</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Fashion Store</p>
+
+</footer>
+
+
+
+<!-- ORDER POPUP -->
+
+<div id="orderPopup" class="popup">
+
+<div class="popup-content">
+
+<h2>Complete Your Order</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<input type="text" id="address" placeholder="Delivery Address">
+
+<button onclick="confirmOrder()">Confirm Order</button>
+
+<button onclick="closePopup()">Cancel</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+let selectedProduct = "";
+
+function openPopup(product){
+
+selectedProduct = product;
+
+document.getElementById("orderPopup").style.display="flex";
+
+}
+
+function closePopup(){
+
+document.getElementById("orderPopup").style.display="none";
+
+}
+
+function confirmOrder(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+
+let message =
+"New Order%0A%0A" +
+"Product: " + selectedProduct + "%0A" +
+"Name: " + name + "%0A" +
+"Phone: " + phone + "%0A" +
+"Address: " + address;
+
+let url = "https://wa.me/212775089960?text=" + message;
+
+window.open(url, "_blank");
+
+}
+
+</script>
+
+
+</body>
+</html>
