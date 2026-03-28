@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -22,7 +24,6 @@
 <div class="popup-content">
 
 <h2>Welcome 👋</h2>
-
 <p>Welcome to Fashion Store</p>
 <p>Discover our streetwear collection</p>
 
@@ -34,7 +35,19 @@
 
 
 
+<!-- HEADER -->
+
 <header>
+
+<div class="mobile-left">
+
+<span class="menu-icon" onclick="toggleMenu()">☰</span>
+
+<span class="search-icon" onclick="toggleSearch()">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+
+</div>
 
 <h1 class="logo">Fashion Store</h1>
 
@@ -49,7 +62,84 @@
 
 </nav>
 
+<div class="mobile-right">
+
+<span class="account-icon">
+<i class="fa-regular fa-user"></i>
+</span>
+
+<span class="cart-icon">
+<i class="fa-solid fa-bag-shopping"></i>
+</span>
+
+</div>
+
 </header>
+
+
+
+<!-- SEARCH PANEL -->
+
+<div class="search-panel" id="searchPanel">
+
+<div class="search-header">
+
+<input 
+type="text"
+id="searchInput"
+placeholder="Search products..."
+onkeypress="if(event.key === 'Enter'){searchProducts()}"
+>
+
+<span onclick="closeSearch()">✖</span>
+
+</div>
+
+<div class="search-products">
+
+
+<div class="search-item">
+
+<img src="oversize-urban-black.jpg">
+
+<p>Urban T-Shirt Black</p>
+
+</div>
+
+
+
+<div class="search-item">
+
+<img src="oversize-urban-jeans-blue.jpg">
+
+<p>Urban Jeans</p>
+
+</div>
+
+
+
+<div class="search-item">
+
+<img src="oversize-urban-jacket-black.jpg">
+
+<p>Urban Jacket</p>
+
+</div>
+
+
+
+<div class="search-item">
+
+<img src="oversize-urban-shoes-white.jpg">
+
+<p>Urban Shoes</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 
 
@@ -138,6 +228,37 @@
 </section>
 
 
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>Why Choose Our Store</h2>
+
+<div class="features-container">
+
+<div class="feature-box">
+<h3>Fast Delivery</h3>
+<p>We deliver quickly anywhere in Morocco.</p>
+</div>
+
+<div class="feature-box">
+<h3>High Quality</h3>
+<p>Premium quality streetwear.</p>
+</div>
+
+<div class="feature-box">
+<h3>Best Prices</h3>
+<p>Affordable fashion with great prices.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
